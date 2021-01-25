@@ -1,0 +1,29 @@
+extends layout
+block content
+    .login-page(style="width: 70%;")
+        h2.text-center.mt-3= title
+        form(method="POST" enctype="multipart/form-data")
+            label(for='title' style="text-align: start; margin-right: auto; padding-left: 20px") Mahsulot nomi
+            input#title(type="text" name="title" placeholder="Mahsulotning nomi")
+            label(for='price' style="text-align: start; margin-right: auto; padding-left: 20px") Mahsulot narxi
+            input#price(type="text" name="price" placeholder="Mahsulotning narxi")
+            label(for='sale' style="text-align: start; margin-right: auto; padding-left: 20px") Mahsulot chegirmasi
+            input#sale(type="text" name="sale" placeholder="10")
+            label(for='category' style="text-align: start; margin-right: auto; padding-left: 20px") Mahsulot turi
+            select#category(name="category")
+                option(value="bolalar dunyosi") Bolalar dunyosi
+                option(value="ko'chmas mulk") Ko'chmas mulk
+                option(value="transport") Transport
+                option(value="ish") Ish
+                option(value="hayvonlar") hayvonlar
+                option(value="uy va bog") uy va bog
+                option(value="elektor") elektor jihozlari
+                option(value="moda va stil") moda va stil
+                option(value="xobbi") xobbi
+                option(value="tekinga beraman") tekinga beraman    
+                option(value="ayriboshlash") ayriboshlash                
+            label(for='photo' style="text-align: start; margin-right: auto; padding-left: 20px") Mahsulot rasmimi
+            input#photo(type="file" name="photo" placeholder="Mahsulotning rasmi")
+            label(for='comments' style="text-align: start; margin-right: auto; padding-left: 20px") Mahsulot haqida
+            textarea#comments(name="comments", cols="30", rows="10")
+            button Tovar qo'shish

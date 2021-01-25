@@ -1,0 +1,21 @@
+extends layout
+block content
+  .login-page(style="width: 45%;")
+      h2.text-center.mt-3= title
+      form(action="/account/acc" method="POST" enctype="multipart/form-data")
+          label(for='name' style="text-align: start; margin-right: auto; padding-left: 20px") Имя
+          input#name(type="text" name="name" placeholder="Ismingizni kiriting")
+          label(for='userEmail' style="text-align: start; margin-right: auto; padding-left: 20px") Email
+          input#userEmail(type="text" name="email" placeholder="Email или номер телефона")
+          label(for='phone' style="text-align: start; margin-right: auto; padding-left: 20px") Номер
+          input#phone(type="text" name="phone" placeholder="Telefon raqamingizni kiriting")
+          label(for='login' style="text-align: start; margin-right: auto; padding-left: 20px") Логин
+          input#login(type="text" name="username" placeholder="Login kiriting")
+          label(for='userPassword' style="text-align: start; margin-right: auto; padding-left: 20px") Пароль
+          input#userPassword(type="password" name="password" placeholder="Parolingizni kiriting")
+          label(for='userPassword2' style="text-align: start; margin-right: auto; padding-left: 20px") Подтвердите пароль
+          input#userPassword2(type="password" name="password2" placeholder="Parolingizni qaytadan kiriting")
+          label(for='photo' style="text-align: start; margin-right: auto; padding-left: 20px") Выберите фото для аватар
+          input#photo(type="file" name="photos" placeholder="Rasmingizni kiriting")
+          button Ro'yxatdan otish
+      span.about Входя в раздел Мой профиль, вы принимаете Условия использования сайта
